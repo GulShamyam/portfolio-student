@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join a Club - University Clubs Portal</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="/styles/style.css">
+    
+    <style>
+        /* Specific styles for the join form */
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background-color: #2980b9;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #34495e;
+        }
+
+        /* Full width card modifier */
+        .card.full-width {
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>University Clubs Portal</h1>
+        <p>Explore. Connect. Grow.</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="clubs.html">Clubs</a>
+        <a href="events.html">Events</a>
+        <a href="join.html">Join</a>
+        <a href="highlights.html">Highlights</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Join Form Section -->
+        <section class="card full-width">
+            <div class="form-container">
+                <h2 style="text-align: center; margin-bottom: 25px;">Join a Student Club</h2>
+                <p style="text-align: center; margin-bottom: 30px; color: #555;">Fill out the application below to become a member of one of our university clubs. We can't wait to welcome you!</p>
+                
+                <form action="#" method="get" onsubmit="alert('Thank you for your application! The club organizing committee will contact you soon.'); return false;">
+                    
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentId">Student ID</label>
+                        <input type="text" id="studentId" name="studentId" placeholder="e.g. 12345678" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">University Email</label>
+                        <input type="email" id="email" name="email" placeholder="your.name@university.edu" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clubSelect">Select a Club</label>
+                        <select id="clubSelect" name="club" required>
+                            <option value="">-- Choose a Club --</option>
+                            <option value="technology">Technology Club</option>
+                            <option value="debate">Debate Society</option>
+                            <option value="international">International Students Club</option>
+                            <option value="photography">Photography Society</option>
+                            <option value="science">Science & Innovation Club</option>
+                            <option value="music">Music and Arts Group</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivation">Why do you want to join?</label>
+                        <textarea id="motivation" name="motivation" placeholder="Tell us briefly about your interest in this club..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2026 University Clubs Portal</p>
+    </footer>
+
+</body>
+</html>
