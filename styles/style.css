@@ -49,15 +49,15 @@ nav a:hover {
   color: #f1c40f;
 }
 
-/* Container */
+/* Container (default for index page) */
 .container {
   max-width: 1000px;
   margin: 30px auto;
   padding: 0 20px;
 }
 
-/* Grid for Clubs Page */
-.container {
+/* Grid Layout for Clubs & Highlights */
+.grid-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -110,23 +110,9 @@ footer {
   margin-top: 30px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2em;
-  }
+/* ================= EVENTS PAGE ================= */
 
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  .container {
-    grid-template-columns: 1fr; /* Stack cards on mobile */
-  }
-}
-
-/* Specific styles for events page */
+/* Event Grid */
 .event-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -140,9 +126,7 @@ footer {
   border-left: 5px solid #3498db;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .event-item:hover {
@@ -157,13 +141,11 @@ footer {
   color: #e74c3c;
   margin-bottom: 8px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .event-item h3 {
   color: #2c3e50;
   margin-bottom: 10px;
-  font-size: 1.3em;
 }
 
 .event-item p {
@@ -171,15 +153,31 @@ footer {
   font-size: 0.95em;
 }
 
-/* Full width card modifier */
+/* Full width card */
 .card.full-width {
   grid-column: 1 / -1;
 }
 
-/* Responsive Media Queries for Events Grid */
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 900px) {
   .event-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .grid-layout {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -187,6 +185,7 @@ footer {
   .event-grid {
     grid-template-columns: 1fr;
   }
+
   .event-item {
     border-left: none;
     border-top: 5px solid #3498db;
